@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <WindowSizesProvider>
+    <DeviceProvider>
+      <FrontSpringDemo />
+      <TwoFacesDemo />
+    </DeviceProvider>
+  </WindowSizesProvider>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from 'vue'
 
-export default {
-  name: 'App',
+import FrontSpringDemo from './demos/FrontSpring.demo.vue'
+import TwoFacesDemo from './demos/TwoFaces.demo.vue'
+
+export default defineComponent({
+  name: 'app',
   components: {
-    HelloWorld
-  }
-}
+    FrontSpringDemo,
+    TwoFacesDemo,
+  },
+})
 </script>
 
 <style>
@@ -19,8 +27,5 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
