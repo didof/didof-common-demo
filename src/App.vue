@@ -1,10 +1,12 @@
 <template>
-  <WindowSizesProvider>
-    <DeviceProvider>
-      <FrontSpringDemo />
-      <TwoFacesDemo />
-    </DeviceProvider>
-  </WindowSizesProvider>
+  <div id="app">
+    <WindowSizesProvider>
+      <DeviceProvider>
+        <FrontSpringDemo />
+        <TwoFacesDemo />
+      </DeviceProvider>
+    </WindowSizesProvider>
+  </div>
 </template>
 
 <script>
@@ -27,5 +29,8 @@ export default defineComponent({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  width: 100vw;
+  height: 100%;
 }
 </style>
