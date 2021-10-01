@@ -1,18 +1,20 @@
 <template>
   <div class="layout green">
     <img src="@/assets/TwoFaces.png" class="image" />
-    <TwoFaces>
-      <template #front>
-        <div class="front" v-center>
-          <img src="@/assets/neapulitan_card__retro.jpg" class="adapt" />
-        </div>
-      </template>
-      <template #back>
-        <div class="back" v-center>
-          <img src="@/assets/neapulitan_card__front.jpg" class="adapt" />
-        </div>
-      </template>
-    </TwoFaces>
+    <div class="card">
+      <TwoFaces>
+        <template #front>
+          <div class="front" v-center>
+            <img src="@/assets/neapulitan_card__retro.jpg" class="adapt" />
+          </div>
+        </template>
+        <template #back>
+          <div class="back" v-center>
+            <img src="@/assets/neapulitan_card__front.jpg" class="adapt" />
+          </div>
+        </template>
+      </TwoFaces>
+    </div>
   </div>
 </template>
 
@@ -38,6 +40,12 @@ export default defineComponent({
   .layout {
     flex-direction: column;
   }
+}
+
+.card {
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
 .green {

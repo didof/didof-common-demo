@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <div>
+      <AristidebenoistDemo />
+    </div>
     <WindowSizesProvider>
       <DeviceProvider>
         <FrontSpringDemo />
@@ -14,12 +17,14 @@ import { defineComponent } from 'vue'
 
 import FrontSpringDemo from './demos/FrontSpring.demo.vue'
 import TwoFacesDemo from './demos/TwoFaces.demo.vue'
+import AristidebenoistDemo from './demos/Aristidebenoist.demo.vue'
 
 export default defineComponent({
   name: 'app',
   components: {
     FrontSpringDemo,
     TwoFacesDemo,
+    AristidebenoistDemo,
   },
 })
 </script>
