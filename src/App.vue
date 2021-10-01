@@ -1,12 +1,13 @@
 <template>
   <div id="app">
-    <div>
-      <AristidebenoistDemo />
-    </div>
     <WindowSizesProvider>
       <DeviceProvider>
-        <FrontSpringDemo />
-        <TwoFacesDemo />
+        <span>
+          <router-link to="/">Aristidebenoist</router-link>
+          <router-link to="/frontsprint">FrontSping</router-link>
+          <router-link to="/twofaces">TwoFaces</router-link>
+        </span>
+        <router-view></router-view>
       </DeviceProvider>
     </WindowSizesProvider>
   </div>
@@ -15,17 +16,8 @@
 <script>
 import { defineComponent } from 'vue'
 
-import FrontSpringDemo from './demos/FrontSpring.demo.vue'
-import TwoFacesDemo from './demos/TwoFaces.demo.vue'
-import AristidebenoistDemo from './demos/Aristidebenoist.demo.vue'
-
 export default defineComponent({
   name: 'app',
-  components: {
-    FrontSpringDemo,
-    TwoFacesDemo,
-    AristidebenoistDemo,
-  },
 })
 </script>
 
@@ -37,5 +29,17 @@ export default defineComponent({
 
   width: 100vw;
   height: 100%;
+}
+
+span {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+}
+
+span a {
+  text-decoration: none;
+  font-weight: 900;
 }
 </style>

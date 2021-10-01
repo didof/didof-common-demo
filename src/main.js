@@ -1,13 +1,14 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router'
 
 import DidofCommon from 'didof-common'
 
 const app = createApp(App)
 
-console.log(DidofCommon.components)
-
 app.use(DidofCommon.components)
 app.use(DidofCommon.directives)
+
+app.use(router)
 
 app.mount('#app')
